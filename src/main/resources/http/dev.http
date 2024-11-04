@@ -1,0 +1,53 @@
+### Get all Trips
+GET {{url}}/trips
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Get Trip by id
+GET {{url}}/trips/2
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Create Trip
+POST {{url}}/trips
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+    "name": "Trip to Danish Islands",
+    "startTime": "2021-12-01",
+    "endTime": "2021-12-10",
+    "startPosition": "Bornholm",
+    "price": 500,
+    "category": "SEA"
+}
+
+### Update Trip by id
+PUT {{url}}/trips/4
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Trip to Bornholm",
+  "startTime": "2021-12-01",
+  "endTime": "2021-12-10",
+  "startPosition": "Bornholm",
+  "price": 1000,
+  "category": "SEA"
+}
+
+### Delete Trip by id
+DELETE {{url}}/trips/4
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Add guide to trip
+PUT {{url}}/trips/1/guides/2
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+### Populate trips and guides
+POST {{url}}/trips/populate
+Authorization: Bearer {{jwt_token}}
+
+
